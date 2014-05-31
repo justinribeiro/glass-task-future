@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1>Welcome to Glass Task Future!</h1>
+  <p>Please sign in to receive our start card, which then allow you to ping to create a task that will send you a random message 60 seconds in the future!</p>
+  <div id="gConnect">
+    <button class="g-signin" data-accesstype="offline" data-approvalprompt="force" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div id="authOps" style="display:none">
+      <h2>You are now signed in to the app using Google+</h2>
+      <div id="profile">
+       <div class="row">
+          <div class="col-md-3" >
+            <img id="gplus-profile-picture" />
+          </div>
+          <div class="col-md-9">
+            <h2 id="gplus-displayName"></h2>
+            <h3 id="gplus-tagline"></h3>
+            <h3><a href="" id="gplus-url"></a></h3>
+            <button id="disconnect" class="btn btn-warning">Disconnect your Google account from this app</button>
+          </div>
+        </div>
+      </div>
+      <h2>Authentication Logs</h2>
+      <pre id="authResult"></pre>
+    </div>
+  </div>
+</div>
+{% endblock %}
